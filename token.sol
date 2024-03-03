@@ -11,7 +11,7 @@ contract PUBGToken is ERC20, Ownable {
     uint256 coins;
     uint256 bullets;
 
-    constructor() ERC20("PUBGToken", "PUBG") Ownable() {
+    constructor() ERC20("PUBGToken", "PUBG") Ownable(msg.sender){
         _mint(msg.sender, 10);
         coins = 10;
         killPoints = 0;
