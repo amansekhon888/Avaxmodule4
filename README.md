@@ -1,1 +1,46 @@
-# Avaxmodule4
+# PUBGToken (PUBG)
+
+PUBGToken is an ERC20-compatible token deployed on the Ethereum blockchain. It is specifically designed for a gaming context inspired by PlayerUnknown's Battlegrounds (PUBG), featuring functionalities such as earning kill points, redeeming points for tokens, purchasing ammunition, and shooting enemies.
+
+## Features
+
+- **ERC20 Compatibility**: PUBGToken adheres to the ERC20 standard, allowing seamless integration with existing Ethereum wallets, exchanges, and smart contracts.
+- **In-Game Mechanics**: The token introduces gaming elements such as earning kill points, redeeming points for tokens, purchasing ammunition, and shooting enemies.
+- **Ownership Controls**: The contract inherits from OpenZeppelin's Ownable, allowing the contract owner to execute certain privileged functions.
+
+## Deployment
+
+The PUBGToken contract is deployed on the Ethereum mainnet with the following parameters:
+
+- **Token Name**: PUBGToken
+- **Token Symbol**: PUBG
+- **Initial Supply**: 10 tokens
+- **Decimals**: 18
+
+## Usage
+
+### Initial Deployment
+
+Upon deployment, the contract creator receives an initial supply of 10 PUBG tokens, along with in-game resources such as coins and bullets.
+
+### Earning Kill Points
+
+Players can earn kill points by shooting enemies using the `shootEnemy` function. Each successful shot awards 2 kill points.
+
+### Redeeming Kill Points
+
+Players can redeem their accumulated kill points for tokens using the `redeemKillPoint` function. This function converts kill points into tokens, adding them to the player's balance.
+
+### Purchasing Ammunition
+
+Players can purchase ammunition using their coins by calling the `buyAmmo` function. This function deducts the specified amount of coins from the player's balance and provides them with the corresponding amount of bullets.
+
+## Security
+
+- Ensure that only trusted addresses have ownership of the contract to prevent unauthorized modifications.
+- Validate user inputs to prevent unintended behavior or exploits.
+- Thoroughly test the contract logic before deploying it to a production environment.
+
+## License
+
+PUBGToken is licensed under the [MIT License](LICENSE).
