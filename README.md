@@ -35,6 +35,10 @@ Players can redeem their accumulated kill points for tokens using the `redeemKil
 
 Players can purchase ammunition using their coins by calling the `buyAmmo` function. This function deducts the specified amount of coins from the player's balance and provides them with the corresponding amount of bullets.
 
+### Viewing Current Values
+
+Players can take count of their killPoints, coins, and bullets by calling `values` function. This function returns the current statistical figures of total killPoints accumulated, coins, and bullets left.
+
 ## Security
 
 - Ensure that only trusted addresses have ownership of the contract to prevent unauthorized modifications.
