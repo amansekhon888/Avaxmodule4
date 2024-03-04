@@ -12,8 +12,8 @@ PUBGToken is an ERC20-compatible token deployed on the Ethereum blockchain. It i
 
 The PUBGToken contract is deployed on the Ethereum mainnet with the following parameters:
 
-- **Token Name**: PUBGToken
-- **Token Symbol**: PUBG
+- **Token Name**: Degen
+- **Token Symbol**: DGN
 - **Initial Supply**: 10 tokens
 - **Decimals**: 18
 
