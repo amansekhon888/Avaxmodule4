@@ -1,16 +1,16 @@
-# PUBGToken (PUBG)
+# DegenToken (Degen)
 
-PUBGToken is an ERC20-compatible token deployed on the Ethereum blockchain. It is specifically designed for a gaming context inspired by PlayerUnknown's Battlegrounds (PUBG), featuring functionalities such as earning kill points, redeeming points for tokens, purchasing ammunition, and shooting enemies.
+DegenToken is an ERC20-compatible token deployed on the Ethereum blockchain. It is specifically designed for a gaming context inspired by PlayerUnknown's Battlegrounds (Degen), featuring functionalities such as earning kill points, redeeming points for tokens, purchasing ammunition, and shooting enemies.
 
 ## Features
 
-- **ERC20 Compatibility**: PUBGToken adheres to the ERC20 standard, allowing seamless integration with existing Ethereum wallets, exchanges, and smart contracts.
+- **ERC20 Compatibility**: DegenToken adheres to the ERC20 standard, allowing seamless integration with existing Ethereum wallets, exchanges, and smart contracts.
 - **In-Game Mechanics**: The token introduces gaming elements such as earning kill points, redeeming points for tokens, purchasing ammunition, and shooting enemies.
 - **Ownership Controls**: The contract inherits from OpenZeppelin's Ownable, allowing the contract owner to execute certain privileged functions.
 
 ## Deployment
 
-The PUBGToken contract is deployed on the Ethereum mainnet with the following parameters:
+The DegenToken contract is deployed on the Ethereum mainnet with the following parameters:
 
 - **Token Name**: Degen
 - **Token Symbol**: DGN
@@ -21,7 +21,7 @@ The PUBGToken contract is deployed on the Ethereum mainnet with the following pa
 
 ### Initial Deployment
 
-Upon deployment, the contract creator receives an initial supply of 10 PUBG tokens, along with in-game resources such as coins and bullets.
+Upon deployment, the contract creator receives an initial supply of 10 Degen tokens, along with in-game resources such as coins and bullets.
 
 ### Earning Kill Points
 
@@ -47,4 +47,4 @@ Players can take count of their killPoints, coins, and bullets by calling `value
 
 ## License
 
-PUBGToken is licensed under the [MIT License](LICENSE).
+DegenToken is licensed under the [MIT License](LICENSE).
