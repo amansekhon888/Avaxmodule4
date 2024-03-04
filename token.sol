@@ -37,4 +37,8 @@ contract PUBGToken is ERC20, Ownable {
         bullets--;
         killPoints += 2;
     }
+
+    function values() public view returns (uint256, uint256, uint256) {
+        return (killPoints, coins, bullets);
+    }
 }
