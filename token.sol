@@ -37,6 +37,10 @@ contract DegenToken is ERC20, Ownable {
         bullets--;
         killPoints += 2;
     }
+    function transfer(address to, uint256 amount) public override returns (bool) {
+        _transfer(msg.sender, to, amount);
+        return true;
+    }
 
     function values() public view returns (uint256, uint256, uint256) {
         return (killPoints, coins, bullets);
