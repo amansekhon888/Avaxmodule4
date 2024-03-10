@@ -1,4 +1,3 @@
-
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
@@ -6,12 +5,11 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract DegenToken is ERC20, Ownable {
-
     uint256 killPoints;
     uint256 coins;
     uint256 bullets;
 
-    constructor() ERC20("Degen", "DGN") Ownable(msg.sender){
+    constructor() ERC20("Degen", "DGN") Ownable(msg.sender) {
         _mint(msg.sender, 10);
         coins = 10;
         killPoints = 0;
@@ -20,8 +18,13 @@ contract DegenToken is ERC20, Ownable {
 
     function redeemKillPoint() public {
         require(killPoints > 0, "No kill points to redeem");
-        coins += killPoints;
-        _mint(msg.sender, killPoints);
+        if (killPoints > 20) {
+            coins += killPoints * 2;
+            _mint(msg.sender, killPoints * 2);
+        } else {
+            coins += killPoints;
+            _mint(msg.sender, killPoints);
+        }
         killPoints = 0;
     }
 
@@ -37,13 +40,18 @@ contract DegenToken is ERC20, Ownable {
         bullets--;
         killPoints += 2;
     }
-    function transfer(address to, uint256 amount) public override returns (bool) {
-        require(coins >= amount, "Amount should be less than coins");
+
+    function transfer(address to, uint256 amount)
+        public
+        override
+        returns (bool)
+    {
+        require(balanceOf(msg.sender) >= amount, "Insufficient balance");
         _transfer(msg.sender, to, amount);
         return true;
     }
 
-    function getBalance() public view returns (uint256, uint256, uint256) {
-        return (killPoints, coins, bullets);
+    function getBalance(address account) public view returns (uint256) {
+        return balanceOf(account);
     }
 }
